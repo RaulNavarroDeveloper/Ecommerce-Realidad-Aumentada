@@ -1,0 +1,363 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.carrito-navbar {
+  display: flex;
+  margin-right: 3rem;
+}
+
+.carrito-navbar:hover {
+  cursor: pointer;
+}
+
+.carrito-navbar li img {
+  margin-bottom: 1rem;
+}
+
+.nro-qty {
+  width: 18px;
+  height: 18px;
+  background-color: #87d8cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  right: 22px;
+  bottom: 10px;
+}
+
+.nro-qty span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  position: absolute;
+  font-size: 12px;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #b47dcd, #e878a2, #eb85ab);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s ease-in-out;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+.nav-div[data-animation="to-left"] a::before {
+  transform-origin: right;
+}
+
+/* IMAGEN HEADER  */
+h1 {
+  text-indent: -10000px;
+}
+.imagen-header {
+  height: 517px;
+  width: 100%;
+  background: url(img/header/header-desktop.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.p-header {
+  max-width: 400px;
+}
+
+.button-header {
+  width: 150px;
+  height: 55px;
+  border-radius: 60px;
+  border: white solid 3px;
+  background-color: transparent;
+}
+
+.a-header {
+  text-decoration: none;
+}
+
+.a-header .button-header {
+  color: white;
+  transition: border 0.8s;
+}
+
+.a-header:hover .button-header:hover {
+  color: black;
+  border: solid 3px #64d9e9;
+  transition: 0.8s;
+}
+
+h1 > p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.contenedor-textos {
+  margin: 0 0 4rem 3rem;
+}
+
+/* SLIDES  */
+
+.slides,
+.carousel-fade {
+  height: 525px;
+}
+
+.img-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 525px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(150%);
+}
+.pill-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.uil {
+  font-size: 6rem;
+}
+
+/* SECCION PRODUCTOS */
+.add {
+  transition: 0.5s;
+  margin-bottom: 1rem;
+  width: 140px;
+  height: 40px;
+  border-radius: 18px;
+  border: rgb(125, 78, 170);
+  background-color: #7d4eaa;
+  color: rgb(238, 238, 238);
+  box-shadow: 6px 6px 3px 0px rgba(0,0,0,0.1);
+}
+
+.add:hover {
+    border: double 2px transparent;
+    border-radius: 18px;
+    background-image: linear-gradient(to right, #d78eca, #98a3fb);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 6px 6px 3px 0px rgba(0,0,0,0.1);
+    transition: 1s;
+}
+
+.producto {
+  box-shadow: 8px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  border-radius:10px ;
+}
+
+#productos {
+  margin-top: 2rem;
+}
+
+#productos h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.producto:hover {
+  background-color: rgb(238, 238, 238);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.card {
+  width: 16rem;
+}
+
+#productos-metaverso {
+  margin-top: 3rem;
+}
+
+#productos-metaverso h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.uil-shopping-cart {
+  font-size: 30px;
+}
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-width: 75%;
+}
+
+.inputs input {
+    padding: 10px;
+    width: 100%;
+    margin-top: 0rem;
+    height: 30px;
+}
+
+ /* CARRITO  */
+ .div-carrito-vacio{
+    width: 200px;
+    height: 55px;
+    border-radius: 40px;
+    background-color: #7d4eaa;
+    color: white;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.8s;
+ }
+
+ .div-carrito-vacio:hover{
+    background-color: #9d70c7;
+    transition: 0.8s;
+ }
+
+.div-checkout{
+    width: 200px;
+    height: 55px;
+    border-radius: 40px;
+    border: #7d4eaa 3px solid;
+    color: #7d4eaa;
+    margin: auto;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.8s;
+}
+
+.div-checkout:hover {
+  cursor: pointer;
+  background-color: #7d4eaa;
+  color: rgb(238, 238, 238);
+  transition: 1s;
+}
+
+.vaciar-carrito{
+    width: 200px;
+    height: 55px;
+    border-radius: 40px;
+    border: #7d4eaa 3px solid;
+    color: #7d4eaa;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.8s;
+}
+
+.vaciar-carrito:hover{
+  cursor: pointer;
+  background-color: #7d4eaa;
+  color: rgb(238, 238, 238);
+  transition: 1s;
+}
+
+.formCheckOut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.efecto-transparente::after {
+  background: gainsboro;
+  opacity: 0.5;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+/* TRANSICION DEL CARRITO */
+@keyframes wipe-in-left {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:wipe:left"] {
+  animation: 0.5s cubic-bezier(0.25, 1, 0.3, 0.5) wipe-in-left both;
+}
+/* MEDIA QUERIES  */
+
+@media (min-width: 992px) {
+  .navbar {
+    height: 80px;
+  }
+}
+
+@media (max-width: 769px) {
+  .imagen-header {
+    width: 100%;
+    background: url(img/header/header-tablet.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .button-container {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .imagen-header {
+    width: 100%;
+    background: url(img/header/header-mobile.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .button-container {
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width:992px){
+
+      .nav-item{
+        width: 100px;
+    }
+
+    .nav-item-largo{
+        width: 200px;
+    }
+}
